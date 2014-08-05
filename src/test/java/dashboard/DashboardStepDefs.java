@@ -1,16 +1,31 @@
 package dashboard;
 
+import java.io.IOException;
+
+import cucumber.annotation.After;
+import cucumber.annotation.Before;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
 import cucumber.runtime.PendingException;
 
 public class DashboardStepDefs {
+	AbstractPage ap= new AbstractPage();
 
+	
+	@Before
+	public void openBrowser() throws IOException{
+		ap.initialize();
+		
+	}
+	@After
+	public void closeBrowser(){
+		ap.tearDown();
+	}
+	
 @Given("^I am on Dashboard landing page \"([^\"]*)\"$")
 public void I_am_on_Dashboard_landing_page(String arg1) {
-    // Express the Regexp above with the code you wish you had
-    throw new PendingException();
+    ap.tearUp();
 }
 
 @Given("^I logged in successfully$")
