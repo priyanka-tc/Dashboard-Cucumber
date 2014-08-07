@@ -28,6 +28,7 @@ public class AbstractPage {
 		/***
 		 * Loading CONFIG property File
 		 */
+
 		if (driver == null) {
 			CONFIG = new Properties();
 			FileInputStream fn = new FileInputStream(
