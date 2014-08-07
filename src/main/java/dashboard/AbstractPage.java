@@ -63,7 +63,7 @@ public class AbstractPage {
 		driver.manage().window().maximize();
 
 	}
-
+int naresh = 2;
 	public void closeBrowser() {
 
 		driver.close();
