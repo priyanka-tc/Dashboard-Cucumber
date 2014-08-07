@@ -97,5 +97,10 @@ public class AbstractPage {
 		return null;
 
 	}
+	
+	
+	public void test(){
+		System.out.println("practizing git comments");
+	}
 
 }
