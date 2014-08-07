@@ -21,7 +21,8 @@ public void Open_browser() throws IOException {
 
 @Given("^I am on Dashboard log in page \"([^\"]*)\"$")
 public void I_am_on_Dashboard_log_in_page(String arg1) {
-    AP.tearUp();
+  //  AP.tearUp();
+	//test
 }
 
 @When("^I enter valid username poneill$")
