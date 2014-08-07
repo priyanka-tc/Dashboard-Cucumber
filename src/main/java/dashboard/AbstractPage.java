@@ -34,23 +34,24 @@ public class AbstractPage {
 
 		OR = new Properties();
 		fn = new FileInputStream(System.getProperty("user.dir")
-				+ "/src/main/resources/utilsOR.properties");
+				+ "/src/main/resources/utils/OR.properties");
 		OR.load(fn);
 
 		/**
 		 * Initialising WebDriver
 		 */
 
-		if (CONFIG.getProperty("browser").equalsIgnoreCase("firefox")) {
+		if (CONFIG.getProperty("browser").equalsIgnoreCase("Firefox")) {
 			driver = new FirefoxDriver();
+			
 		} else if (CONFIG.getProperty("browser").equalsIgnoreCase("chrome"))
-			System.setProperty("webdriver.chrome.driver",
-					"C:\\SubVersion\\chromedriver.exe");
+			/*System.setProperty("webdriver.chrome.driver",
+					"C:\\SubVersion\\chromedriver.exe");*/
 		driver = new ChromeDriver();
 	}
 
 	public void tearUp() {
-		driver.get(CONFIG.getProperty("testURL"));
+		driver.get(CONFIG.getProperty("testSiteURL"));
 		driver.manage().window().maximize();
 
 	}
