@@ -1,8 +1,5 @@
 package dashboard_login;
 
-import java.io.IOException;
-
-import cucumber.annotation.Before;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
@@ -20,7 +17,6 @@ public class Dashboard_loging_Stepdef {
 public void I_am_on_Dashboard_log_in_page(String arg1) {
     AP.lanchBrowser();
 }
-
 @When("^I enter valid username \"([^\"]*)\"$")
 public void I_enter_valid_username(String arg1) {
 	LP.enter_username(arg1);
@@ -30,13 +26,13 @@ public void I_enter_valid_username(String arg1) {
 @When("^I enter valid password \"([^\"]*)\"$")
 public void I_enter_valid_password(String arg1) throws InterruptedException {
    LP.enter_password(arg1);
-   Thread.sleep(4000);
+   Thread.sleep(2000);
 }
 
 @Then("^It should land on Dashboard main page$")
 public void It_should_land_on_Dashboard_main_page() {
-   //LoginPage.login(false);
-LP.testlogin();
+   LoginPage.login(false);
+
 	
 	
 }
