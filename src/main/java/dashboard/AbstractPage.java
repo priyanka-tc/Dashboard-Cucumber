@@ -53,7 +53,7 @@ public class AbstractPage {
 				driver = new FirefoxDriver();
 			} else if (CONFIG.getProperty("browser").equalsIgnoreCase("chrome"))
 				System.setProperty("webdriver.chrome.driver",
-						"C:\\SubVersion\\chromedriver.exe");
+						"C:/SubVersion/chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 	}
@@ -63,7 +63,7 @@ public class AbstractPage {
 		driver.manage().window().maximize();
 
 	}
-int naresh = 2;
+
 	public void closeBrowser() {
 
 		driver.close();
@@ -77,7 +77,7 @@ int naresh = 2;
 		try {
 
 			if (Element == Xpath) {
-				WebElement myDynamicElement = (new WebDriverWait(driver, 2))
+				WebElement myDynamicElement = (new WebDriverWait(driver, 10))
 						.until(ExpectedConditions.presenceOfElementLocated(By
 								.xpath(Xpath)));
 				Presense = myDynamicElement.isDisplayed();
