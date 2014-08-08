@@ -16,7 +16,6 @@ public class Dashboard_loging_Stepdef {
 public void Open_browser() throws IOException {
 	AP.initialize();
 	
-	
 }
 
 @Given("^I am on Dashboard log in page \"([^\"]*)\"$")
