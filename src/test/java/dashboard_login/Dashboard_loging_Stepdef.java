@@ -15,10 +15,18 @@ public class Dashboard_loging_Stepdef {
 	LoginPage LP = new LoginPage();
 	
 	
+<<<<<<< HEAD
 
 @Given("^I am on Dashboard log in page \"([^\"]*)\"$")
 public void I_am_on_Dashboard_log_in_page(String arg1) {
     AP.lanchBrowser();
+=======
+}
+
+@Given("^I am on Dashboard log in page \"([^\"]*)\"$")
+public void I_am_on_Dashboard_log_in_page(String arg1) {
+    
+>>>>>>> fcaa3c9b95f387919ef921cfccca0b549f729492
 }
 
 @When("^I enter valid username \"([^\"]*)\"$")
