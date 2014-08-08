@@ -23,14 +23,13 @@ public void I_enter_from_date_along_with_time_on_Search_component(String arg1) {
 
 @When("^I enter Until date along with time \"([^\"]*)\"$")
 public void I_enter_Until_date_along_with_time(String arg1) {
-    // Express the Regexp above with the code you wish you had
-    throw new PendingException();
+   ho.utillDateAndTime(arg1);
 }
 
 @When("^I search for results$")
-public void I_search_for_results() {
-    // Express the Regexp above with the code you wish you had
-    throw new PendingException();
+public void I_search_for_results() throws InterruptedException {
+    ho.searchResults();
+    
 }
 
 @Then("^it should display results according to search criteria$")

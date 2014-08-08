@@ -11,6 +11,8 @@ import dashboard.LoginPage;
 @RunWith(Cucumber.class)
 @Cucumber.Options(features="handoff/handoff.feature",
 format= {"json:target/cucumber.json"})
+//tags="@Search_With_DateAndTime")
+//tags="@Search_With_BookingRef")
 
 public class RunTest {
 	static AbstractPage ap= new AbstractPage();
@@ -24,6 +26,6 @@ public class RunTest {
 	}
 	@AfterClass
 	public static void closeBrowser(){
-		//ap.closeBrowser();
+		ap.closeBrowser();
 	}
 }
