@@ -52,8 +52,8 @@ public class AbstractPage {
 			if (CONFIG.getProperty("browser").equalsIgnoreCase("firefox")) {
 				driver = new FirefoxDriver();
 			} else if (CONFIG.getProperty("browser").equalsIgnoreCase("chrome"))
-			/*	System.setProperty("webdriver.chrome.driver",
-						"C:\\SubVersion\\chromedriver.exe");*/
+				System.setProperty("webdriver.chrome.driver",
+						"C:\\SubVersion\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 	}

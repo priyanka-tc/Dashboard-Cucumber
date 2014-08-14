@@ -25,7 +25,7 @@ public class HandoffPage extends AbstractPage {
 
 	public void searchResults() throws InterruptedException {
 		getObject(OR.getProperty("click_search_button")).click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		
 	}
 
@@ -35,7 +35,9 @@ public class HandoffPage extends AbstractPage {
 	}
 
 	public void enter_BookingRefNo(String arg1) {
-		getObject(OR.getProperty("enter_bookingRef_into_textBox")).sendKeys(arg1);
+		WebElement bookRef=getObject(OR.getProperty("enter_bookingRef_into_textBox"));
+		bookRef.clear();
+		bookRef.sendKeys(arg1);
 		
 	}
 

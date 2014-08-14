@@ -3,7 +3,6 @@ Feature: Dashboard Handoff
   #As a User
   #I would like to view the Handoff section on the Dashboard application
   #so that I can easily and quickly see the handoffs XMLs and filter them out by different options.
-  
   @Search_With_DateAndTime
   Scenario Outline: Handoff section search and results components
     Given that a User lands on the Handoff section
@@ -15,6 +14,7 @@ Feature: Dashboard Handoff
     Examples: 
       | from_date_time                                          | until_date_time                                         |
       | "Tue Jul 01 2014 00:00:00 GMT+0100 (GMT Daylight Time)" | "Thu Aug 07 2014 00:00:00 GMT+0100 (GMT Daylight Time)" |
+      #| "Wed Jan 01 2014 00:00:00 GMT+0000 (GMT Standard Time)" | "Thu Jul 31 2014 00:00:00 GMT+0100 (GMT Daylight Time)" |
 
   @Search_With_BookingRef
   Scenario Outline: Search by booking ref no
@@ -27,3 +27,5 @@ Feature: Dashboard Handoff
     Examples: 
       | booking_ref_no |
       | "666"          |
+    #  | "96068619"     |
+    #  | "96069170"     |
