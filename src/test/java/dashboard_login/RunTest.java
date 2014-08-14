@@ -20,9 +20,10 @@ public class RunTest {
 		ap.initialize();
 		
 	}
-	//@AfterClass
+	@AfterClass
 	public static void closeBrowser(){
 		ap.closeBrowser();
 	}
+
 
 }

@@ -5,7 +5,9 @@ Feature: Log In Page for Dashboard
     Given I am on Dashboard log in page "http://localhost:3000/#/signin"
     When I enter valid username <username>
     And I enter valid password <password>
-    Then It should land on Dashboard main page
+    Then It should land on Dashboard main page 
+    When I click on Log out
+    Then User should Log out
 
     Examples: 
       | username  | password |

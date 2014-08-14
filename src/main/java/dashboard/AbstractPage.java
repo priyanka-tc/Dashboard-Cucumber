@@ -63,10 +63,7 @@ public class AbstractPage {
 		driver.manage().window().maximize();
 
 	}
-<<<<<<< HEAD
 
-=======
->>>>>>> fcaa3c9b95f387919ef921cfccca0b549f729492
 	public void closeBrowser() {
 
 		driver.close();
