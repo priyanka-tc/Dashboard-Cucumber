@@ -2,6 +2,7 @@ package dashboard_login;
 
 import java.io.IOException;
 
+import junit.framework.Assert;
 import cucumber.annotation.Before;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
@@ -15,19 +16,14 @@ public class Dashboard_loging_Stepdef {
 	LoginPage LP = new LoginPage();
 	
 	
-<<<<<<< HEAD
+
 
 @Given("^I am on Dashboard log in page \"([^\"]*)\"$")
 public void I_am_on_Dashboard_log_in_page(String arg1) {
     AP.lanchBrowser();
-=======
 }
 
-@Given("^I am on Dashboard log in page \"([^\"]*)\"$")
-public void I_am_on_Dashboard_log_in_page(String arg1) {
-    
->>>>>>> fcaa3c9b95f387919ef921cfccca0b549f729492
-}
+
 
 @When("^I enter valid username \"([^\"]*)\"$")
 public void I_enter_valid_username(String arg1) {
@@ -43,10 +39,24 @@ public void I_enter_valid_password(String arg1) throws InterruptedException {
 
 @Then("^It should land on Dashboard main page$")
 public void It_should_land_on_Dashboard_main_page() {
-   //LoginPage.login(false);
-LP.testlogin();
+   	LP.testlogin();
+	//LP.store_loggedusername();
 	
 	
+	
+}
+
+@When("^I click on Log out$")
+public void I_click_on_Log_out() {
+   LP.log_out();
+   
+    
+}
+
+@Then("^User should Log out$")
+public void User_should_Log_out() {
+    // Express the Regexp above with the code you wish you had
+    throw new PendingException();
 }
 
 @When("^I enter invalid username \"([^\"]*)\"$")
