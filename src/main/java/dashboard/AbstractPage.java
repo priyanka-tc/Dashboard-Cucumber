@@ -3,7 +3,6 @@ package dashboard;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,11 +16,12 @@ public class AbstractPage {
 	 * Author: Naresh Kumar 05/08/2014
 	 */
 
-	public static WebDriver driver;
+	public static WebDriver driver=null;
 	public static Properties OR = null;
 	public static Properties CONFIG = null;
 	public static boolean isLogged = false;
 	static boolean Presense;
+	
 
 	public void initialize() throws IOException {
 
@@ -61,6 +61,9 @@ public class AbstractPage {
 	public void lanchBrowser() {
 		driver.get(CONFIG.getProperty("testSiteURL"));
 		driver.manage().window().maximize();
+		String str="hello, poneill!";
+		String splitchar=str.substring(7, 13);
+		System.out.println("splited char is  "+ splitchar);
 
 	}
 
