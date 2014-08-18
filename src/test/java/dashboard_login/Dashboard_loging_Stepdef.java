@@ -26,16 +26,16 @@ public void I_am_on_Dashboard_log_in_page(String arg1) {
     AP.lanchBrowser();
 }
 
-<<<<<<< HEAD
 
 
-=======
+
+
 @Given("^I am on Dashboard log in page \"([^\"]*)\"$")
 public void I_am_on_Dashboard_log_in_page(String arg1) {
     
->>>>>>> fcaa3c9b95f387919ef921cfccca0b549f729492
+
 }
->>>>>>> c44a8d22c296e5bd8be322f31893f82d8f56af72
+
 @When("^I enter valid username \"([^\"]*)\"$")
 public void I_enter_valid_username(String arg1) {
 	LP.enter_username(arg1);
@@ -50,13 +50,13 @@ public void I_enter_valid_password(String arg1) throws InterruptedException {
 
 @Then("^It should land on Dashboard main page$")
 public void It_should_land_on_Dashboard_main_page() {
-<<<<<<< HEAD
+
    	LP.testlogin();
 	//LP.store_loggedusername();
-=======
+
    LoginPage.login(false);
 
->>>>>>> c44a8d22c296e5bd8be322f31893f82d8f56af72
+
 	
 	
 	

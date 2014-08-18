@@ -1,13 +1,12 @@
 package dashboard;
-<<<<<<< HEAD
+
 
 import junit.framework.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-=======
->>>>>>> c44a8d22c296e5bd8be322f31893f82d8f56af72
+
 public class LoginPage extends AbstractPage{
 	public String arg1;
 	public  String splitchar;
@@ -19,27 +18,19 @@ public class LoginPage extends AbstractPage{
 			return;}
 		
 		try{	
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
+
+
 			
 			getObject(OR.getProperty("login_Button")).click();
-=======
-<<<<<<< HEAD
->>>>>>> c44a8d22c296e5bd8be322f31893f82d8f56af72
+
 			driver.findElement(By.xpath(OR.getProperty("login_Button"))).click();
 			//getObject(OR.getProperty("login_Button")).click();
 
 			getObject(OR.getProperty("userName_textBox")).sendKeys("poneill");
 			getObject(OR.getProperty("password_textBox")).sendKeys("pass");
 			getObject(OR.getProperty("login_Button")).click();
-<<<<<<< HEAD
 
-=======
->>>>>>> fcaa3c9b95f387919ef921cfccca0b549f729492
->>>>>>> c4047ae4a7764ee1ac532ca09ec64e5cd00e25cc
->>>>>>> c44a8d22c296e5bd8be322f31893f82d8f56af72
 		}
 		catch(Throwable t){
 			System.err.print("");
@@ -59,7 +50,7 @@ public class LoginPage extends AbstractPage{
 		
 	}
 	public void enter_password(String arg1){
-<<<<<<< HEAD
+
 		getObject(OR.getProperty("password_textBox")).sendKeys(arg1);driver.findElement(By.xpath(OR.getProperty("login_Button"))).click();
 	}
 	public void testlogin(){
@@ -95,10 +86,10 @@ public class LoginPage extends AbstractPage{
 		getObject(OR.getProperty("click_on_log_out")).click();
 		// TODO Auto-generated method stub
 		
-=======
+
 		getObject(OR.getProperty("password_textBox")).sendKeys(arg1);
 		getObject(OR.getProperty("login_Button")).click();
->>>>>>> c44a8d22c296e5bd8be322f31893f82d8f56af72
+
 	}
 	
 }
