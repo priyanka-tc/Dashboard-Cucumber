@@ -15,7 +15,7 @@ public class DashboardMainPage extends AbstractPage {
 			
 			String linkClass=navLinks.getAttribute("class");
 			System.out.println("Class active or not : "+linkClass);
-			Thread.sleep(2000);
+			//Thread.sleep(2000);
 			actual=driver.getCurrentUrl();
 			System.out.println("Actual" +actual);
 			

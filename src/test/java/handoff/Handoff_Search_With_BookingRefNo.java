@@ -1,12 +1,15 @@
 package handoff;
 
+import junit.framework.Assert;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
 import cucumber.runtime.PendingException;
+import dashboard.AbstractPage;
 import dashboard.HandoffPage;
 
 public class Handoff_Search_With_BookingRefNo {
 	HandoffPage ho=new HandoffPage();
+	AbstractPage ap=new AbstractPage();
 	
 	@When("^I click on Booking ref button$")
 	public void I_click_on_Booking_ref_button() {
@@ -21,13 +24,16 @@ public class Handoff_Search_With_BookingRefNo {
 
 	@When("^I click on search button$")
 	public void I_click_on_search_button() throws InterruptedException {
-	 ho.searchResults();  
+	 ho.click_on_search_btn();
 	}
 
 	@Then("^it should display results according to booking ref no$")
 	public void it_should_display_results_according_to_booking_ref_no() {
-	    // Express the Regexp above with the code you wish you had
-	    throw new PendingException();
+		ho.searhBookingRefResults();
+		System.out.println(ho.expected+ "values " +ap.actual);
+		Assert.assertEquals(ho.expected, ap.actual);
+		
+	    
 	}
 
 
