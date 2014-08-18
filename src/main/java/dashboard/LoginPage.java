@@ -22,13 +22,10 @@ public class LoginPage extends AbstractPage{
 			
 			getObject(OR.getProperty("login_Button")).click();
 
-			driver.findElement(By.xpath(OR.getProperty("login_Button"))).click();
-			//getObject(OR.getProperty("login_Button")).click();
-
-			getObject(OR.getProperty("userName_textBox")).sendKeys("poneill");
+			/*getObject(OR.getProperty("userName_textBox")).sendKeys("poneill");
 			getObject(OR.getProperty("password_textBox")).sendKeys("pass");
 			getObject(OR.getProperty("login_Button")).click();
-
+*/
 
 		}
 		catch(Throwable t){

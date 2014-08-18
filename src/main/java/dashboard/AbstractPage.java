@@ -12,16 +12,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AbstractPage {
+	
 	/**
 	 * Author: Naresh Kumar 05/08/2014
 	 */
 
-	public static WebDriver driver=null;
+	public static WebDriver driver;
 	public static Properties OR = null;
 	public static Properties CONFIG = null;
 	public static boolean isLogged = false;
 	static boolean Presense;
-	
+	public String actual;
 
 	public void initialize() throws IOException {
 
@@ -61,9 +62,9 @@ public class AbstractPage {
 	public void lanchBrowser() {
 		driver.get(CONFIG.getProperty("testSiteURL"));
 		driver.manage().window().maximize();
-		String str="hello, poneill!";
+		/*String str="hello, poneill!";
 		String splitchar=str.substring(7, 13);
-		System.out.println("splited char is  "+ splitchar);
+		System.out.println("splited char is  "+ splitchar);*/
 
 	}
 
@@ -95,13 +96,23 @@ public class AbstractPage {
 				return driver.findElement(By.linkText(linkText));
 			}
 		} catch (Throwable t) {
-			// t.printStackTrace();
-			return null;
+			 t.printStackTrace();
+			
 		}
 		return null;
 
 	}
 	
 	
+	
+	//The below method has 3 parameters string ,int, int
+	// It will fail you provide invalid endIndex , make sure cross check with feature file param
+	public String substring(String locator, int beginIndex, int endIndex ){
+		String element=getObject(OR.getProperty(locator)).getText();
+		actual=element.substring(beginIndex, endIndex);
+		System.out.println("actual is "+actual);
+		return actual;
+		
+	}
 	
 }

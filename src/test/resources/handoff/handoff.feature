@@ -26,6 +26,5 @@ Feature: Dashboard Handoff
 
     Examples: 
       | booking_ref_no |
-      | "666"          |
-    #  | "96068619"     |
-    #  | "96069170"     |
+      | "96068619"     |
+      
